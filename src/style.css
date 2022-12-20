@@ -1,0 +1,298 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #799278;
+}
+
+.container {
+  display: flex;
+  padding: 30px;
+  width: 30vw;
+  height: 100vh;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #e7dbc4;
+  border-radius: 20px;
+  transition: background-color 0.5s ease-in;
+}
+
+.circle {
+  position: absolute;
+  background-color: rgb(84, 51, 51);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+
+
+.fox-wrapper {
+  position: relative;
+  border: #b94a09 6px solid;
+  margin-top: 30px;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: -10;
+  transition: all 0.6s ease-in;
+}
+
+
+
+/* 狐狸的头 扇形 */
+.fox-head {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  top: 195px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 150px solid #c66334;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* 狐狸的脸 */
+.fox-cheeks {
+  position: absolute;
+  top: 175px;
+  left: 50%;
+  width: 165px;
+  height: 165px;
+  background-color: #e7dbc4;
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 90%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1
+}
+
+/* 狐狸左眼 */
+.left-eye {
+  position: absolute;
+  top: 270px;
+  left: 140px;
+  width: 20px;
+  height: 20px;
+  background-color: #453f38;
+  transition: all 0.5s ease-in;
+  border-radius: 50%;
+  z-index: 2
+}
+
+/* 狐狸右眼 */
+.right-eye {
+  position: absolute;
+  top: 270px;
+  left: 230px;
+  width: 20px;
+  height: 20px;
+  background-color: #453f38;
+  border-radius: 50%;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+
+.nose {
+  width: 15px;
+  height: 15px;
+  background-color: #453f38;
+  border-radius: 50%;
+  position: absolute;
+  top: 338px;
+  left: 186px;
+  z-index: 2
+}
+
+.left-ear {
+  position: absolute;
+  top: 158px;
+  left: 95px;
+  width: 0px;
+  height: 0px;
+  border-top: 70px solid #b94a09;
+  border-radius: 50%;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  transform: rotate(-65deg);
+  z-index: -2;
+}
+
+.left-inner-ear {
+  position: absolute;
+  top: 185px;
+  left: 120px;
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid #e5dcc6;
+  border-radius: 50%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(-65deg);
+  z-index: -2;
+}
+
+.right-ear {
+  position: absolute;
+  top: 161px;
+  left: 195px;
+  width: 0px;
+  height: 0px;
+  border-top: 70px solid #b94a09;
+  border-radius: 50%;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  transform: rotate(65deg);
+  z-index: -2
+}
+
+.right-inner-ear {
+  position: absolute;
+  top: 186px;
+  left: 231px;
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid #e5dcc6;
+  border-radius: 50%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(65deg);
+  z-index: -2
+}
+
+/* 脖子 */
+.neck {
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: #ccc1ad;
+  border-top-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  transform: translateX(-50%) rotate(-45deg);
+
+  z-index: -2
+}
+
+.body {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: #b94a09;
+  z-index: -3;
+  border-top-left-radius: 80% 55%;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 55% 80%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.tail {
+  position: absolute;
+  z-index: -6;
+  background-color: rgb(175, 51, 18);
+  width: 280px;
+  height: 170px;
+  transform: rotate(0deg);
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 90%;
+  left: 100px;
+  transform: skewY(-30deg) skewX(30deg) rotate(-10deg);
+  animation: luminescence 1s linear infinite;
+  transform-origin: bottom right;
+}
+
+.tail-fur .tail-left {
+  width: 20px;
+  height: 30px;
+  background-color: rgb(224, 204, 169);
+  transform: rotate(58deg);
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 90%;
+  position: absolute;
+  margin-top: -13px;
+  margin-left: 252px;
+}
+
+.tail-fur .tail-center {
+  width: 20px;
+  height: 30px;
+  background-color: rgb(224, 204, 169);
+  transform: rotate(20deg);
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 90%;
+  position: absolute;
+  margin-top: -5px;
+  margin-left: 255px;
+}
+
+.tail-fur .tail-right {
+  width: 20px;
+  height: 30px;
+  background-color: rgb(224, 204, 169);
+  transform: rotate(-12deg);
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 90%;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 264px;
+}
+
+
+@keyframes luminescence {
+  0% {
+    filter: drop-shadow(0px 0px 5px rgb(175, 51, 18));
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 25px rgb(175, 51, 18));
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 5px rgb(175, 51, 18));
+  }
+}
+
+.btn.night {
+  background-color: rgb(84, 51, 51);
+}
+
+.circle.night {
+  background-color: #ccc1ad;
+  transform: translateX(31px);
+}
+
+.fox-wrapper.night {
+  padding-top: 30px;
+  background-color: #453f38;
+}
+
+.left-eye.night,
+.right-eye.night {
+  height: 5px;
+  top: 273px;
+}

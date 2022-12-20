@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>狐狸</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="btn">
+      <div class="circle"></div>
+    </div>
+    <div class="fox-wrapper">
+      <div class="fox-head"></div>
+      <div class="fox-cheeks"></div>
+      <div class=" left-eye"></div>
+      <div class=" right-eye"></div>
+      <div class="nose"></div>
+      <div class="left-ear"></div>
+      <div class="left-inner-ear"></div>
+      <div class="right-ear"></div>
+      <div class="right-inner-ear"></div>
+      <div class="neck"></div>
+      <div class="body"></div>
+      <div class="tail">
+        <div class="tail-fur">
+          <div class="tail-left"></div>
+          <div class="tail-center"></div>
+          <div class="tail-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script>
+    const circle = document.querySelector('.circle')
+    const btn = document.querySelector('.btn')
+    const fox = document.querySelector('.fox-wrapper')
+    const leftEye = document.querySelector('.left-eye')
+    const rightEye = document.querySelector('.right-eye')
+    circle.addEventListener('click', () => {
+      circle.classList.toggle('night')
+      btn.classList.toggle('night')
+      leftEye.classList.toggle('night')
+      rightEye.classList.toggle('night')
+      fox.classList.toggle('night')
+    })
+
+  </script>
+</body>
+
+</html>
